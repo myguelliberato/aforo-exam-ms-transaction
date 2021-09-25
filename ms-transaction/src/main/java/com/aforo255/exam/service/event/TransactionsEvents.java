@@ -23,7 +23,7 @@ public class TransactionsEvents {
 	
 	public void processTransactionEvent(ConsumerRecord<Integer, String> consumerRecord ) throws JsonMappingException, JsonProcessingException {
 		Transaction event = objectMapper.readValue(consumerRecord.value(), Transaction.class);
-		log.info("transactionEvent : {}", event.getInvoicedId());		
+		log.info("transactionEvent : {}", event.getInvoiceId());		
 		transactionService.save(event);
 	}
 	

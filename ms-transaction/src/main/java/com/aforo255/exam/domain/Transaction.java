@@ -16,7 +16,7 @@ public class Transaction {
 	@BsonId
 	private String id;
 	private double amount;
-	private int invoicedId;
+	private int invoiceId;
 	private LocalDateTime date;
 
 }
